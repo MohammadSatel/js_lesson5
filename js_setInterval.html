@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval </title>
+</head>
+
+<body>
+    <div id="d1" style="position: absolute;">
+        <button onclick="moveRight()">right</button>
+    </div>
+    <br>
+    <div id="d2" style="position: absolute;">
+        <button onclick="moveDown()">down</button>
+    </div>
+    <br>
+    <div id="d3" style="position: absolute;">
+        <button style="color: coral; background-color: crimson;">moving</button>
+    </div>
+
+
+    </div>
+    <script>
+
+        let i = 100
+        let w = 100
+        let h = 100
+
+
+        function moveRight() {
+            d3.style.left = i + "px"
+            d3.style.top = i + "px"
+            i += 50
+        }
+        function moveDown() {
+            console.log(window.innerHeight);
+            console.log(window.innerWidth);
+            if (h < window.innerHeight) {
+                d2.style.top = h + "px"
+            }
+            if (w < window.innerWidth) {
+                d1.style.top = w + "px"
+            }
+        }
+setInterval(moveDown,1000)
+    </script>
+
+</body>
+
+</html>
